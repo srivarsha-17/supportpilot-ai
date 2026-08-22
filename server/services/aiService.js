@@ -68,7 +68,7 @@ Helpful Grounded Response:`;
  */
 function generateDeterministicAnswer(query, articles) {
   const top = articles[0];
-  return `Based on FlowDesk documentation for **${top.title}**:\n\n${top.content}\n\n*If you need further assistance, our team is happy to help!*`;
+  return `Based on FlowDesk documentation for **${top.title}**:\n\n${top.content}\n\nIf you need further assistance, our team is happy to help!`;
 }
 
 /**

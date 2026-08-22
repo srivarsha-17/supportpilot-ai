@@ -3,12 +3,25 @@ import { Bot, User, AlertOctagon, Info, CheckCircle2 } from 'lucide-react';
 import { CategoryBadge, ConfidenceBadge, SourceBadge } from './StatusBadge';
 
 /**
- * Basic markdown-style formatter for bold text and lists.
+ * Cleans unnecessary escaped markdown characters (like \*, \@, \_) from text.
+ */
+function sanitizeEscapedChars(str) {
+  if (!str || typeof str !== 'string') return '';
+  return str
+    .replace(/\\@/g, '@')
+    .replace(/\\\*/g, '*')
+    .replace(/\\_/g, '_')
+    .replace(/\\([*@_#~`\\\[\]\(\)-])/g, '$1');
+}
+
+/**
+ * Basic markdown-style formatter for bold text, lists, and clean paragraphs.
  */
 function FormattedText({ content }) {
   if (!content) return null;
 
-  const lines = content.split('\n');
+  const cleanContent = sanitizeEscapedChars(content);
+  const lines = cleanContent.split('\n');
 
   return (
     <div className="formatted-content">
@@ -18,14 +31,11 @@ function FormattedText({ content }) {
           return <div key={idx} style={{ height: '8px' }} />;
         }
 
-        // Bold formatting parse **text**
-        const formattedLine = renderBoldSpans(line);
-
         if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
           return (
             <div key={idx} style={{ display: 'flex', gap: '6px', margin: '4px 0' }}>
               <span>•</span>
-              <div>{renderBoldSpans(line.replace(/^[-*]\s+/, ''))}</div>
+              <div>{renderInlineFormatting(line.replace(/^[-*]\s+/, ''))}</div>
             </div>
           );
         }
@@ -35,23 +45,44 @@ function FormattedText({ content }) {
           return (
             <div key={idx} style={{ display: 'flex', gap: '6px', margin: '4px 0' }}>
               <span style={{ fontWeight: 600, color: '#818cf8' }}>{match[1]}</span>
-              <div>{renderBoldSpans(match[2])}</div>
+              <div>{renderInlineFormatting(match[2])}</div>
             </div>
           );
         }
 
-        return <p key={idx} style={{ margin: '4px 0' }}>{formattedLine}</p>;
+        return <p key={idx} style={{ margin: '4px 0' }}>{renderInlineFormatting(line)}</p>;
       })}
     </div>
   );
 }
 
-function renderBoldSpans(text) {
-  const parts = text.split(/(\*\*.*?\*\*)/g);
-  return parts.map((part, i) => {
+function renderInlineFormatting(text) {
+  // Split on bold (**text**) and clean any stray boundary asterisks
+  const boldParts = text.split(/(\*\*.*?\*\*)/g);
+  return boldParts.map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
-      return <strong key={i} style={{ color: '#f3f4f6', fontWeight: 600 }}>{part.slice(2, -2)}</strong>;
+      return (
+        <strong key={i} style={{ color: '#f3f4f6', fontWeight: 600 }}>
+          {part.slice(2, -2)}
+        </strong>
+      );
     }
+    
+    // Check for single asterisk italics *text*
+    const italicParts = part.split(/(\*[^*\n]+\*)/g);
+    if (italicParts.length > 1) {
+      return italicParts.map((subPart, j) => {
+        if (subPart.startsWith('*') && subPart.endsWith('*') && subPart.length > 2) {
+          return (
+            <em key={`${i}-${j}`} style={{ color: '#e2e8f0' }}>
+              {subPart.slice(1, -1)}
+            </em>
+          );
+        }
+        return subPart;
+      });
+    }
+
     return part;
   });
 }
