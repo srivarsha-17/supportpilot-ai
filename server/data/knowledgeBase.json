@@ -1,0 +1,170 @@
+[
+  {
+    "id": "billing-01",
+    "category": "billing",
+    "title": "FlowDesk Subscription Plans and Pricing",
+    "tags": ["pricing", "plans", "starter", "professional", "enterprise", "cost", "subscription"],
+    "summary": "Overview of FlowDesk pricing tiers: Starter, Professional, and Enterprise.",
+    "content": "FlowDesk offers three subscription plans: Starter ($12/user/month billed monthly or $10/user/month billed annually) with basic kanban boards and up to 5 team members; Professional ($24/user/month billed monthly or $19/user/month billed annually) featuring unlimited team members, timeline views, custom fields, and Slack integration; Enterprise ($48/user/month billed annually) which includes SAML SSO, dedicated support, custom audit logs, and unlimited storage."
+  },
+  {
+    "id": "billing-02",
+    "category": "billing",
+    "title": "Billing Cycles and Annual Discounts",
+    "tags": ["billing cycle", "annual", "monthly", "discount", "switch billing", "renewal"],
+    "summary": "How FlowDesk billing cycles operate and how to switch to annual billing to save 20%.",
+    "content": "FlowDesk supports monthly and annual billing cycles. Switching from monthly to annual billing applies an automatic 20% discount on all active user seats. Subscriptions renew automatically at the end of each billing period unless canceled. To switch your billing cycle, navigate to Settings > Billing & Plans > Payment Schedule and select 'Switch to Annual Billing'."
+  },
+  {
+    "id": "billing-03",
+    "category": "billing",
+    "title": "Upgrading Your FlowDesk Plan",
+    "tags": ["upgrade", "plan upgrade", "pro", "enterprise", "add seats", "change plan"],
+    "summary": "Instructions for upgrading your FlowDesk workspace subscription tier or adding seats.",
+    "content": "Workspace Admins and Owners can upgrade their plan at any time by going to Settings > Billing > Change Plan. Select the desired plan (e.g., Starter to Professional) and confirm payment. The upgrade takes effect immediately. The remaining unused time on your previous plan is automatically calculated as a pro-rated credit and applied toward your upgrade invoice."
+  },
+  {
+    "id": "billing-04",
+    "category": "billing",
+    "title": "Downgrading Your FlowDesk Plan",
+    "tags": ["downgrade", "change tier", "reduce seats", "lower plan", "starter"],
+    "summary": "Guidelines on downgrading to a lower plan tier or reducing seat count.",
+    "content": "To downgrade your plan, navigate to Settings > Billing > Change Plan and select 'Downgrade'. Plan downgrades take effect at the end of your current active billing cycle so you retain paid features until that date. Note that if your team exceeds the member or board limits of the lower tier, you must archive excess projects or remove members before the downgrade date."
+  },
+  {
+    "id": "billing-05",
+    "category": "billing",
+    "title": "Resolving Failed Subscription Payments",
+    "tags": ["payment failed", "failed payment", "declined card", "credit card", "retry payment", "invoice overdue"],
+    "summary": "Steps to resolve failed payment alerts and update payment methods.",
+    "content": "When a subscription payment fails, FlowDesk enters a 7-day grace period during which your workspace remains fully functional. FlowDesk automatically retries the charge 3 times over 7 days. To update your payment method: 1. Go to Settings > Billing > Payment Methods. 2. Click 'Add New Card' or edit your existing card. 3. Set the new card as Primary and click 'Pay Now' to immediately retry the failed invoice. If payment fails after 7 days, the workspace is temporarily set to read-only mode."
+  },
+  {
+    "id": "billing-06",
+    "category": "billing",
+    "title": "Viewing and Downloading Invoices & Receipts",
+    "tags": ["invoice", "receipt", "download invoice", "pdf invoice", "vat", "tax id", "billing history"],
+    "summary": "How to view, download PDF invoices, and add custom VAT/Tax details.",
+    "content": "All past invoices and payment receipts are available in Settings > Billing > Invoice History. You can click 'Download PDF' next to any billing date. To add custom VAT numbers, company tax IDs, or billing contact emails to future receipts, go to Settings > Billing > Billing Information and update your Tax & Legal Info."
+  },
+  {
+    "id": "billing-07",
+    "category": "billing",
+    "title": "FlowDesk Refund Policy",
+    "tags": ["refund", "money back", "refund policy", "guarantee", "reimbursement"],
+    "summary": "Understanding FlowDesk's refund eligibility and terms.",
+    "content": "FlowDesk offers a 30-day money-back guarantee for all new annual subscriptions. If you are unsatisfied within the first 30 days of purchasing an annual plan, you can request a full refund by contacting billing support. Monthly subscriptions are non-refundable once the billing month has commenced, but canceling ensures you will not be billed for subsequent months. Pro-rated refunds are not issued for mid-cycle seat removals."
+  },
+  {
+    "id": "billing-08",
+    "category": "billing",
+    "title": "Canceling Your FlowDesk Subscription",
+    "tags": ["cancel", "cancellation", "delete workspace", "end subscription", "stop billing"],
+    "summary": "How to cancel your subscription and what happens to your workspace data.",
+    "content": "To cancel your subscription: 1. Navigate to Settings > Billing & Plans. 2. Scroll to the bottom and click 'Cancel Subscription'. 3. Complete the brief feedback prompt and confirm cancellation. Your workspace will remain active until the end of the current paid billing period. After expiration, workspace data is preserved for 60 days in read-only format before permanent deletion, allowing you to export your data or reactivate."
+  },
+  {
+    "id": "tech-01",
+    "category": "technical",
+    "title": "Application Not Loading or Stuck on Loading Screen",
+    "tags": ["not loading", "blank screen", "stuck spinner", "crash", "white screen", "app slow"],
+    "summary": "Troubleshooting steps when the FlowDesk web app is unresponsive or stuck loading.",
+    "content": "If FlowDesk fails to load or remains stuck on the loading spinner: 1. Perform a hard refresh (Ctrl+F5 on Windows/Linux or Cmd+Shift+R on Mac). 2. Clear browser cache and cookies for app.flowdesk.com. 3. Disable browser extensions (especially ad-blockers or script blockers) or test in an Incognito/Private window. 4. Verify your network allows WebSocket connections (wss://ws.flowdesk.com) as FlowDesk uses WebSockets for real-time collaboration. If the issue persists, check status.flowdesk.com for active outages."
+  },
+  {
+    "id": "tech-02",
+    "category": "technical",
+    "title": "Supported Browsers and System Requirements",
+    "tags": ["browser", "chrome", "firefox", "safari", "edge", "compatibility", "system requirements"],
+    "summary": "Officially supported web browsers and minimum hardware specs for FlowDesk.",
+    "content": "FlowDesk is officially supported on the latest 2 major versions of Google Chrome, Mozilla Firefox, Microsoft Edge, and Apple Safari (version 15+). Internet Explorer is not supported. For optimal performance, we recommend hardware with at least 4GB RAM and a 1080p display resolution. Ensure JavaScript and WebGL hardware acceleration are enabled in your browser settings."
+  },
+  {
+    "id": "tech-03",
+    "category": "technical",
+    "title": "Notification Troubleshooting (Desktop and Email)",
+    "tags": ["notifications", "no notification", "push notifications", "desktop alerts", "email notifications", "not receiving notifications"],
+    "summary": "Fixing issues with missing desktop push alerts or notification emails.",
+    "content": "If you are not receiving FlowDesk notifications: 1. In FlowDesk, go to User Profile > Notifications and verify that the specific notification channels (In-app, Desktop Push, or Email) are enabled. 2. For desktop push alerts, check your operating system settings (Windows Focus Assist or macOS Do Not Disturb) and ensure browser notifications are allowed for app.flowdesk.com in your browser URL bar lock icon. 3. For missing emails, check your Spam/Junk folder and add 'notifications@flowdesk.com' to your email safe sender list."
+  },
+  {
+    "id": "tech-04",
+    "category": "technical",
+    "title": "File Upload Limits and Supported Formats",
+    "tags": ["file upload", "attachment", "upload limit", "file size", "supported files", "pdf", "image"],
+    "summary": "Details on file attachment size limits, supported formats, and upload errors.",
+    "content": "FlowDesk supports attachments up to 50MB per file on Starter and Professional plans, and up to 100MB per file on Enterprise plans. Supported formats include PDF, PNG, JPG, GIF, SVG, DOCX, XLSX, PPTX, CSV, and ZIP archives. Executable files (.exe, .dmg, .bat, .sh) are blocked for security reasons. If an upload fails, check your file size, ensure a stable internet connection, and verify your workspace storage quota in Settings > Storage."
+  },
+  {
+    "id": "tech-05",
+    "category": "technical",
+    "title": "Connecting and Troubleshooting Slack and GitHub Integrations",
+    "tags": ["slack", "github", "integration", "webhook", "connect slack", "sync issues"],
+    "summary": "How to set up, authorize, and debug Slack and GitHub integrations in FlowDesk.",
+    "content": "To connect integrations, go to Settings > Workspace > Integrations. For Slack: click 'Add to Slack', authorize permissions, and select default notification channels for task updates. For GitHub: click 'Connect GitHub', authorize repository access, and map branches to FlowDesk project boards. If updates fail to sync, click 'Test Connection' or re-authorize the integration by disconnecting and reconnecting the app."
+  },
+  {
+    "id": "tech-06",
+    "category": "technical",
+    "title": "Troubleshooting Server Errors (HTTP 500 / 502 / 503)",
+    "tags": ["server error", "500", "502", "503", "api error", "service down", "outage"],
+    "summary": "What to do when encountering HTTP 500 error banners in FlowDesk.",
+    "content": "When encountering HTTP 500, 502, or 503 errors: 1. Check the FlowDesk Status Page at status.flowdesk.com to verify if there is an ongoing incident or scheduled maintenance. 2. Wait 2 minutes and refresh the page. 3. If the status page shows all systems operational, take note of the Request ID displayed on the error modal and contact FlowDesk Technical Support."
+  },
+  {
+    "id": "tech-07",
+    "category": "technical",
+    "title": "Real-time Board Synchronization & Offline Conflict Resolution",
+    "tags": ["sync", "real-time", "offline mode", "conflict", "board updates", "collaborative editing"],
+    "summary": "How FlowDesk synchronizes live task movements and handles offline changes.",
+    "content": "FlowDesk utilizes real-time WebSocket state synchronization. When working offline, task updates are queued locally in browser IndexedDB storage and synced automatically once your internet connection is restored. In case of conflicting edits between two teammates on the same task description, FlowDesk preserves the latest timestamped edit and creates a 'Conflict History' snapshot under the task activity feed."
+  },
+  {
+    "id": "account-01",
+    "category": "account_access",
+    "title": "Resetting Your FlowDesk Password",
+    "tags": ["password reset", "forgot password", "change password", "login help", "reset link"],
+    "summary": "Step-by-step instructions for resetting forgotten passwords.",
+    "content": "To reset your password: 1. Go to the login page at app.flowdesk.com/login and click 'Forgot Password?'. 2. Enter your registered account email address and click 'Send Reset Link'. 3. Check your email for a message from 'accounts@flowdesk.com' with the subject 'Reset Your FlowDesk Password'. 4. Click the secure link inside the email (valid for 60 minutes) and enter a new password containing at least 8 characters, including one number and one uppercase letter."
+  },
+  {
+    "id": "account-02",
+    "category": "account_access",
+    "title": "Account Lockout and Security Cooldown",
+    "tags": ["locked account", "account locked", "too many attempts", "cooldown", "unlock account"],
+    "summary": "How to unlock an account locked due to consecutive failed login attempts.",
+    "content": "For security protection, FlowDesk accounts are temporarily locked for 15 minutes after 5 consecutive incorrect password attempts. You can either wait for the 15-minute cooldown timer to expire or click 'Unlock via Email' on the login screen to receive an instant verification link. If you believe your account has been compromised, reset your password immediately after unlocking."
+  },
+  {
+    "id": "account-03",
+    "category": "account_access",
+    "title": "Two-Factor Authentication (2FA) Setup and Backup Codes",
+    "tags": ["2fa", "two-factor", "mfa", "authenticator", "backup codes", "recovery codes", "security"],
+    "summary": "Enabling 2FA using authenticator apps and recovering your account with backup codes.",
+    "content": "To enable Two-Factor Authentication (2FA): 1. Navigate to User Profile > Security > Two-Factor Authentication. 2. Toggle 'Enable 2FA' and scan the QR code with an authenticator app (Google Authenticator, Authy, or 1Password). 3. Enter the 6-digit verification code to confirm. 4. Download and securely store the 10 single-use emergency backup codes provided. If you lose access to your phone, enter any unused backup code at the 2FA login prompt."
+  },
+  {
+    "id": "account-04",
+    "category": "account_access",
+    "title": "Changing Your Account Email Address",
+    "tags": ["change email", "update email", "new email", "email address", "transfer account"],
+    "summary": "Procedure for updating the primary email address linked to your FlowDesk account.",
+    "content": "To change your email address: 1. Go to User Profile > Account Settings. 2. Under 'Email Address', enter your new email and your current password for security verification. 3. Click 'Update Email'. 4. FlowDesk will send confirmation links to both your old and new email addresses. You must click the confirmation link in the new email address within 24 hours to complete the change."
+  },
+  {
+    "id": "account-05",
+    "category": "account_access",
+    "title": "Email Verification Link Expired or Not Received",
+    "tags": ["verification email", "activation link", "expired link", "resend verification", "confirm email"],
+    "summary": "Troubleshooting missing or expired sign-up and email verification links.",
+    "content": "FlowDesk verification links expire after 24 hours. If you did not receive the verification email: 1. Check your Spam, Junk, and Promotions folders for an email from 'no-reply@flowdesk.com'. 2. Visit app.flowdesk.com/verify-resend, enter your email, and click 'Resend Verification'. 3. If corporate email firewalls are blocking incoming automated emails, ask your IT department to allow emails from '@flowdesk.com'."
+  },
+  {
+    "id": "account-06",
+    "category": "account_access",
+    "title": "Google SSO and SAML Single Sign-On Troubleshooting",
+    "tags": ["sso", "google login", "saml", "okta", "azure ad", "single sign-on", "login error"],
+    "summary": "Fixing common issues with Google Login and Enterprise SAML SSO authentication.",
+    "content": "If you experience errors logging in via Google SSO or SAML: 1. Ensure you are selecting the exact email address associated with your FlowDesk workspace. 2. For SAML SSO (Enterprise plan), ensure your identity provider (Okta, Azure AD, OneLogin) administrator has assigned the FlowDesk application to your user account. 3. If you see 'SAML Assertion Expired', verify that your computer's system clock is synchronized accurately with internet time."
+  }
+]

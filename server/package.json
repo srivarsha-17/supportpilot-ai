@@ -1,0 +1,27 @@
+{
+  "name": "supportpilot-ai-server",
+  "version": "1.0.0",
+  "description": "SupportPilot AI - Tier-1 Customer Support Backend for FlowDesk",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node tests/verify-pipeline.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "keywords": [
+    "ai",
+    "customer-support",
+    "rag",
+    "express",
+    "flowdesk"
+  ],
+  "author": "",
+  "license": "ISC"
+}
